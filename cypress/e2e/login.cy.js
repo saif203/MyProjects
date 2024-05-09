@@ -18,7 +18,10 @@ describe('template spec', () => {
     cy.get('#react-select-3-input').type("NCR{enter}");
     cy.get('#city > .css-yk16xz-control > .css-1hwfws3',{timeout:30000}).click();
     cy.get('#react-select-4-input').type("Delhi{enter}");
-
+    for (let i = 1; i <= 10; i++) {
+      cy.get('#dateOfBirthInput').type('{backspace}');
+    }
+    cy.get('#dateOfBirthInput').type('2 DEC 1990{enter}');
 
 
   })
